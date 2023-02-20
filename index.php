@@ -38,29 +38,9 @@ $hotels = [
         ],
 
     ];
-    $title='PHP HOTEL';
     
-        foreach($hotels as $hotel){
-           echo '<table >'
-           echo '<tr>'
-            echo'<th>' echo "$hotel[name]" echo'</th>'
-            
-            
-            echo'</tr>'
-           echo '<tr>'
-           echo '<td>' <?php echo "$hotel['description']" ?>'</td>'
-            
-            </tr>
-            <tr>
-            <td><?php echo $hotel['vote'];?></td>
-            
-            </tr>
-        </table>
-        }
-           
-                
-                
-            ;
+    
+       
     
     ?>
 
@@ -85,7 +65,41 @@ $hotels = [
     
 </head>
 <body>
-    <h1><?php echo $title?></h1>
+    <div>
+    <?php
+     foreach($hotels as $hotel){
+        echo '<div>' ;  
+        echo '<ul>';
+        echo '<li>';
+       echo   $hotel['name'];
+       echo '</li>';
+       echo '</ul>';
+       echo '</div>';
+
+       echo '<div>' ;  
+       echo '<ul>';
+       echo '<li>';
+       echo $hotel['description'];
+      echo '</li>';
+      echo '</ul>';
+      echo '</div>';
+
+      echo '<div>' ;  
+      echo '<ul>';
+        echo '<li>';
+        echo $hotel['vote'];
+       echo '</li>';
+       echo '</ul>';
+       echo '</div>';
+       
+       
+    }
+       
+            
+            
+        ;
+        ?>
+    </div>
     
         
 
